@@ -27,7 +27,7 @@ const Hero = () => {
         </div>
         
         <p className="text-xl md:text-2xl text-foreground mb-12">
-          24 de Janeiro de 2026
+          28 de Maio de 2026
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

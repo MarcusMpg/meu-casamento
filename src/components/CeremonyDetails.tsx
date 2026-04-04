@@ -33,14 +33,14 @@ const CeremonyDetails = () => {
               <Calendar className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
               <div>
                 <p className="font-semibold text-foreground">Data</p>
-                <p className="text-muted-foreground">24 de Janeiro de 2026</p>
+                <p className="text-muted-foreground">28 de Maio de 2026</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <Clock className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
               <div>
                 <p className="font-semibold text-foreground">Horário</p>
-                <p className="text-muted-foreground">A definir</p>
+                <p className="text-muted-foreground">19:45h</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
