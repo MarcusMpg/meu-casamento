@@ -15,7 +15,7 @@ const Hero = () => {
         <Heart className="w-16 h-16 mx-auto mb-8 text-primary animate-pulse" />
         
         <h1 className="text-7xl md:text-9xl font-bold mb-4 text-foreground tracking-tight">
-          Larissa & Rodrigo
+          Jair & Márcia
         </h1>
         
         <div className="flex items-center justify-center gap-4 mb-8">
