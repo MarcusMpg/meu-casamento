@@ -17,7 +17,6 @@ const Hero = () => {
         <h1 className="text-7xl md:text-9xl font-bold mb-4 text-foreground tracking-tight">
           Jair & Márcia
         </h1>
-        </h1>
         
         <div className="flex items-center justify-center gap-4 mb-8">
           <div className="h-px w-16 bg-primary"></div>
