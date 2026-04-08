@@ -1,4 +1,4 @@
-import storyImage from "@/assets/story-sunset.jpg";
+import storyImage from "@/assets/ft-nossa-historia.jpeg";
 
 const OurStory = () => {
   return (
