@@ -54,20 +54,17 @@ const Gallery = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 animate-fade-in">
+        <div className="columns-2 md:columns-3 gap-4 space-y-4 animate-fade-in">
           {images.map((image, index) => (
             <div
               key={index}
-              className={`group relative overflow-hidden rounded-2xl shadow-elegant hover:shadow-xl transition-all duration-300 ${
-                index === 0 || index === 5 || index === 13 ? "md:col-span-2 md:row-span-2" : ""
-              }`}
+              className="group relative overflow-hidden rounded-2xl shadow-elegant hover:shadow-xl transition-all duration-300 break-inside-avoid"
             >
               <img
                 src={image.src}
                 alt={image.alt}
                 loading="lazy"
-                className="w-full h-full min-h-[200px] object-cover group-hover:scale-105 transition-transform duration-500"
-                style={{ aspectRatio: index === 0 || index === 5 || index === 13 ? "4/3" : "3/4" }}
+                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
