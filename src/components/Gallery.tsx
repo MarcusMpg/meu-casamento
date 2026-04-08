@@ -9,6 +9,14 @@ import gallery7 from "@/assets/gallery-7.jpeg";
 import gallery8 from "@/assets/gallery-8.jpeg";
 import gallery9 from "@/assets/gallery-9.jpeg";
 import gallery10 from "@/assets/gallery-10.jpeg";
+import gallery11 from "@/assets/gallery-11.jpeg";
+import gallery12 from "@/assets/gallery-12.jpeg";
+import gallery13 from "@/assets/gallery-13.jpeg";
+import gallery14 from "@/assets/gallery-14.jpeg";
+import gallery15 from "@/assets/gallery-15.jpeg";
+import gallery16 from "@/assets/gallery-16.jpeg";
+import gallery17 from "@/assets/gallery-17.jpeg";
+import gallery18 from "@/assets/gallery-18.jpeg";
 
 const Gallery = () => {
   const images = [
@@ -22,6 +30,14 @@ const Gallery = () => {
     { src: gallery8, alt: "No jardim com flores" },
     { src: gallery9, alt: "Na fonte dos Caruanas" },
     { src: gallery10, alt: "Olhares apaixonados" },
+    { src: gallery11, alt: "Com buquê no jardim" },
+    { src: gallery12, alt: "Na escadaria" },
+    { src: gallery13, alt: "Mãos dadas com flores" },
+    { src: gallery14, alt: "Na ponte da floresta" },
+    { src: gallery15, alt: "Abraço com buquê" },
+    { src: gallery16, alt: "Caminhando na ponte" },
+    { src: gallery17, alt: "Olhares no parque" },
+    { src: gallery18, alt: "De mãos dadas na ponte" },
   ];
 
   return (
@@ -43,14 +59,15 @@ const Gallery = () => {
             <div
               key={index}
               className={`group relative overflow-hidden rounded-2xl shadow-elegant hover:shadow-xl transition-all duration-300 ${
-                index === 0 || index === 3 ? "md:col-span-2 md:row-span-2" : ""
+                index === 0 || index === 5 || index === 13 ? "md:col-span-2 md:row-span-2" : ""
               }`}
             >
               <img
                 src={image.src}
                 alt={image.alt}
+                loading="lazy"
                 className="w-full h-full min-h-[200px] object-cover group-hover:scale-105 transition-transform duration-500"
-                style={{ aspectRatio: index === 0 || index === 3 ? "4/3" : "3/4" }}
+                style={{ aspectRatio: index === 0 || index === 5 || index === 13 ? "4/3" : "3/4" }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
