@@ -1,5 +1,6 @@
 import { MapPin, Clock, Calendar } from "lucide-react";
 import ceremonyImage from "@/assets/ceremony-venue.jpg";
+import ceremonyImage2 from "@/assets/ceremony-venue-2.jpg";
 
 const CeremonyDetails = () => {
   return (
@@ -19,10 +20,15 @@ const CeremonyDetails = () => {
         </div>
 
         <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant animate-slide-up">
-          <div className="mb-8">
+          <div className="mb-8 grid grid-cols-2 gap-4">
             <img 
               src={ceremonyImage} 
-              alt="Lelys Jardim" 
+              alt="Le Lys Jardim - Fachada" 
+              className="w-full h-72 object-cover rounded-xl"
+            />
+            <img 
+              src={ceremonyImage2} 
+              alt="Le Lys Jardim - Cerimônia" 
               className="w-full h-72 object-cover rounded-xl"
             />
           </div>
