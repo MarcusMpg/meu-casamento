@@ -1,8 +1,9 @@
-import { Gift, Heart, X } from "lucide-react";
+import { Gift, Heart, X, Copy, Check } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import qrCodePix from "@/assets/qr-code-pix.jpg";
+import { toast } from "sonner";
+import qrCodePix from "@/assets/qr-code-pix.png";
 
 interface GiftItem {
   name: string;
@@ -117,6 +118,25 @@ const GiftRegistry = () => {
             </div>
             <p className="text-center text-sm text-muted-foreground">
               Escaneie o QR Code acima para fazer o PIX
+            </p>
+            <div className="bg-muted rounded-lg p-3 flex items-center justify-between gap-2">
+              <p className="text-sm text-foreground font-mono truncate">
+                dasilvamarcia450@gmail.com
+              </p>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => {
+                  navigator.clipboard.writeText("dasilvamarcia450@gmail.com");
+                  toast.success("Chave PIX copiada!");
+                }}
+                className="flex-shrink-0"
+              >
+                <Copy className="w-4 h-4" />
+              </Button>
+            </div>
+            <p className="text-center text-xs text-muted-foreground">
+              Chave PIX (e-mail) — clique para copiar
             </p>
           </div>
         </DialogContent>
