@@ -33,7 +33,7 @@ const DressCode = () => {
                 Vestidos longos e fluídos, com tecidos leves e confortáveis.
               </p>
               <p className="text-sm text-muted-foreground italic">
-                As madrinhas e damas usarão tons de rosa seco, rosa canela e rose, mas essa cor não é exclusiva delas! Se você, convidada, quiser usar também, sinta-se à vontade.
+                As madrinhas e damas usarão tons de Azul Royal e Azul Serenity, mas essa cor não é exclusiva delas! Se você, convidada, quiser usar também, sinta-se à vontade.
               </p>
             </div>
 

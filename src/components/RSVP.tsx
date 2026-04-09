@@ -35,7 +35,7 @@ const RSVP = () => {
             <div className="h-px w-20 bg-primary"></div>
           </div>
           <p className="text-lg text-muted-foreground">
-            Por favor, confirme sua presença até <strong>30 de Junho de 2026</strong>
+            Por favor, confirme sua presença até <strong>15 de Maio de 2026</strong>
           </p>
         </div>
 
