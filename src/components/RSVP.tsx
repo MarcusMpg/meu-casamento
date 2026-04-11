@@ -71,20 +71,6 @@ const RSVP = () => {
               />
             </div>
 
-            <div>
-              <Label htmlFor="guests" className="text-lg font-medium">
-                Número de Acompanhantes
-              </Label>
-              <Input
-                id="guests"
-                type="number"
-                min="0"
-                max="5"
-                value={formData.guests}
-                onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
-                className="mt-2 h-12 text-lg"
-              />
-            </div>
 
             <div>
               <Label htmlFor="message" className="text-lg font-medium">
