@@ -28,9 +28,9 @@ const RSVP = () => {
     emailjs
       .send(
         "service_jatoxbx",
-        "template_u6mzda7",
+        "template_c8nhxap",
         templateParams,
-        "7JOgjqcuaG9jNqAn-",
+        "xClUaZZGuyXypGL7Q",
       )
       .then(
         (response) => {
