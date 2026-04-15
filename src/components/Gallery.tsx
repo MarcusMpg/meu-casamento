@@ -77,17 +77,25 @@ const Gallery = () => {
         </div>
       </div>
 
-      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent className="max-w-[90vw] max-h-[90vh] p-2 bg-transparent border-none shadow-none">
-          {selectedImage && (
-            <img
-              src={selectedImage.src}
-              alt={selectedImage.alt}
-              className="w-full h-full max-h-[85vh] object-contain rounded-lg"
-            />
-          )}
-        </DialogContent>
-      </Dialog>
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 cursor-pointer"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button
+            className="absolute top-4 right-4 text-white/80 hover:text-white z-50 bg-black/50 rounded-full p-2 transition-colors"
+            onClick={() => setSelectedImage(null)}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+          <img
+            src={selectedImage.src}
+            alt={selectedImage.alt}
+            className="max-w-[90vw] max-h-[85vh] object-contain rounded-lg cursor-default"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   );
 };
