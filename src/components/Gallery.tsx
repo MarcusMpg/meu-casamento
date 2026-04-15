@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Camera } from "lucide-react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import gallery1 from "@/assets/gallery-1.jpeg";
 import gallery2 from "@/assets/gallery-2.jpeg";
 import gallery3 from "@/assets/gallery-3.jpeg";
@@ -19,6 +21,8 @@ import gallery17 from "@/assets/gallery-17.jpeg";
 import gallery18 from "@/assets/gallery-18.jpeg";
 
 const Gallery = () => {
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+
   const images = [
     { src: gallery1, alt: "Jair e Márcia no parque" },
     { src: gallery2, alt: "Beijo do casal" },
@@ -58,7 +62,8 @@ const Gallery = () => {
           {images.map((image, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl shadow-elegant hover:shadow-xl transition-all duration-300 break-inside-avoid"
+              className="group relative overflow-hidden rounded-2xl shadow-elegant hover:shadow-xl transition-all duration-300 break-inside-avoid cursor-pointer"
+              onClick={() => setSelectedImage(image)}
             >
               <img
                 src={image.src}
@@ -71,6 +76,18 @@ const Gallery = () => {
           ))}
         </div>
       </div>
+
+      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+        <DialogContent className="max-w-[90vw] max-h-[90vh] p-2 bg-transparent border-none shadow-none">
+          {selectedImage && (
+            <img
+              src={selectedImage.src}
+              alt={selectedImage.alt}
+              className="w-full h-full max-h-[85vh] object-contain rounded-lg"
+            />
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
