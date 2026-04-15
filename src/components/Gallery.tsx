@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Camera } from "lucide-react";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+
 import gallery1 from "@/assets/gallery-1.jpeg";
 import gallery2 from "@/assets/gallery-2.jpeg";
 import gallery3 from "@/assets/gallery-3.jpeg";
